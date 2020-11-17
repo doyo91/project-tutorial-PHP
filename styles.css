@@ -11,3 +11,7 @@ form {
   margin: 20px auto;
   padding: 20px;
 }
+
+.card-ingredients {
+  margin-bottom: 20px !important;
+}
