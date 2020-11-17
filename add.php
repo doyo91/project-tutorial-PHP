@@ -1,15 +1,36 @@
 <?php 
-   /* if(isset($_GET['submit'])){
-       echo $_GET['email'];
-       echo $_GET['title'];
-       echo $_GET['ingredients'];
-   } */ 
+   
    if(isset($_POST['submit'])){
-       echo htmlspecialchars($_POST['email']);
-       echo htmlspecialchars($_POST['title']);
-       echo htmlspecialchars($_POST['ingredients']);
-   } 
-//    XSS Atacks htmlspecialchars()
+    
+    // check email
+    if(empty($_POST['email'])) {
+        echo 'An email is required <br/>';
+    } else {
+        $email = $_POST['email'];
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+           echo 'Email must be a valid email address'; 
+        }
+    }
+    // check title
+    if(empty($_POST['title'])) {
+        echo 'A title is required <br/>';
+    } else {
+        $title = $_POST['title'];
+        if(!preg_match('/^[a-zA-Z\s]+$/', $title)) {
+            echo 'Title must be letters and spaces only';
+        }
+    }
+    // check ingredients
+    if(empty($_POST['ingredients'])) {
+        echo 'At least one ingredient is required <br/>';
+    } else {
+        $ingredients = $_POST['ingredients'];
+        if(!preg_match('/^([a-zA-Z\s]+)(,\s*[a-zA-Z\s]*)*$/', $ingredients)) {
+            echo 'Ingredients must be a comma separated list';
+        }
+    }
+   } // end of POST check
+
 ?>
 
 <!DOCTYPE html>
