@@ -57,7 +57,10 @@
 
 
         }
+        // close connection
+        mysqli_close($conn);
     } // end of POST check
+
 
 ?>
 
