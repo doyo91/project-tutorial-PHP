@@ -23,6 +23,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
     <?php include('templates/header.php'); ?>
     <main>
         <h4 class="center grey-text">Pizzas!</h4>
@@ -31,6 +32,7 @@
                 <?php foreach($pizzas as $pizza): ?>
                     <div class="col s6 md3">
                         <article class="card z-depth-0">
+                            <img class="pizza-img" src="img/pizza.svg" alt="pizza logo">
                             <div class="card-content center">
                                 <h6>
                                     <?php echo htmlspecialchars($pizza['title'] );?>

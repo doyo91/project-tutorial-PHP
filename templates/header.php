@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- css custom -->
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .pizza-img {
+            width: 100px;
+            margin: 40px auto -30px;
+            display: block;
+            position: relative;
+            top:-30px;
+        }
+    </style>
 </head>
 <body class="grey lighten-4">
     <nav class="white z-depth-0">

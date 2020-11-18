@@ -5,13 +5,14 @@
 .brand-text {
   color: #cbb09c !important;
 }
+.card img {
+  position: relative !important;
+  display: block !important;
+  border: 5px solid red !important;
+}
 
 form {
   max-width: 460px;
   margin: 20px auto;
   padding: 20px;
-}
-
-.card-ingredients {
-  margin-bottom: 20px !important;
 }
